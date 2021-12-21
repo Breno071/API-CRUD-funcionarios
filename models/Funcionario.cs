@@ -27,7 +27,7 @@ namespace CRUD_funcionarios
     [Required(ErrorMessage = "O país é obrigatório")]
     public string pais { get; set; }
 
-    public string empresa { get; set; }
-    public float salario { get; set; }
+    public string? empresa { get; set; }
+    public float? salario { get; set; }
   }
 }
