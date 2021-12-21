@@ -685,11 +685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Narde\\Visual Studio\\Projects\\CRUD funcionarios\\CRUD funcionarios\\CRUD funcionarios.csproj",
+      "projectUniqueName": "C:\\Users\\Narde\\Desktop\\API-CRUD-funcionarios\\CRUD funcionarios.csproj",
       "projectName": "CRUD funcionarios",
-      "projectPath": "D:\\Narde\\Visual Studio\\Projects\\CRUD funcionarios\\CRUD funcionarios\\CRUD funcionarios.csproj",
+      "projectPath": "C:\\Users\\Narde\\Desktop\\API-CRUD-funcionarios\\CRUD funcionarios.csproj",
       "packagesPath": "C:\\Users\\Narde\\.nuget\\packages\\",
-      "outputPath": "D:\\Narde\\Visual Studio\\Projects\\CRUD funcionarios\\CRUD funcionarios\\obj\\",
+      "outputPath": "C:\\Users\\Narde\\Desktop\\API-CRUD-funcionarios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
