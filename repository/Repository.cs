@@ -44,12 +44,16 @@ namespace CRUD_funcionarios.repository
       }
     }
 
-    public async Task<IEnumerable<Funcionario>> GetAllAsync()
+    public async Task<dynamic> GetAllAsync()
     {
       using (var connection = _Dbsession.Connection)
       {
         string sql = $"SELECT * from funcionarios";
-        return await connection.QueryAsync<Funcionario>(sql);
+        var result = await connection.QueryAsync<Funcionario>(sql);
+        return new
+        {
+          funcionarios = result
+        };
       }
     }
 

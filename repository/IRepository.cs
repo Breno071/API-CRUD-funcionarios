@@ -8,6 +8,6 @@ namespace CRUD_funcionarios
     Task UpdateAsync(long id, Funcionario funcionario);
     Task<int> DeleteAsync(long id);
     Task<Funcionario> GetAsync(long id);
-    Task<IEnumerable<Funcionario>> GetAllAsync();
+    Task<dynamic> GetAllAsync();
   }
 }

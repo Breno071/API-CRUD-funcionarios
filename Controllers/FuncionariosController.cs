@@ -14,7 +14,7 @@ namespace CRUD_funcionarios.Controllers
     }
 
     [HttpGet]
-    public async Task<IEnumerable<Funcionario>> GetAllAsync()
+    public async Task<dynamic> GetAllAsync()
     {
       return await _repository.GetAllAsync();
     }
