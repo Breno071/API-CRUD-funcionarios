@@ -44,26 +44,23 @@ namespace CRUD_funcionarios.repository
       }
     }
 
-    public async Task<dynamic> GetAllAsync()
+    public async Task<IEnumerable<Funcionario>> GetAllAsync()
     {
       using (var connection = _Dbsession.Connection)
       {
         string sql = $"SELECT * from funcionarios";
         var result = await connection.QueryAsync<Funcionario>(sql);
-        return new
-        {
-          funcionarios = result
-        };
+        return result;
       }
     }
 
-    public async Task UpdateAsync(long id, [FromBody] Funcionario funcionario)
+    public async Task<int> UpdateAsync(long id, [FromBody] Funcionario funcionario)
     {
       using (var connection = _Dbsession.Connection)
       {
         string sql = $"UPDATE funcionarios SET nome = @nome, sobrenome = @sobrenome, email = @email, genero = @genero, cidade = @cidade, pais = @pais, empresa = @empresa, salario = @salario WHERE id = {id}";
 
-        await connection.ExecuteAsync(sql, new { nome = funcionario.nome, sobrenome = funcionario.sobrenome, email = funcionario.email, genero = funcionario.genero, cidade = funcionario.cidade, pais = funcionario.pais, empresa = funcionario.empresa, salario = funcionario.salario });
+        return await connection.ExecuteAsync(sql, new { nome = funcionario.nome, sobrenome = funcionario.sobrenome, email = funcionario.email, genero = funcionario.genero, cidade = funcionario.cidade, pais = funcionario.pais, empresa = funcionario.empresa, salario = funcionario.salario });
       }
     }
   }

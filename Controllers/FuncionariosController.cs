@@ -14,7 +14,7 @@ namespace CRUD_funcionarios.Controllers
     }
 
     [HttpGet]
-    public async Task<dynamic> GetAllAsync()
+    public async Task<IEnumerable<Funcionario>> GetAllAsync()
     {
       return await _repository.GetAllAsync();
     }
@@ -32,15 +32,15 @@ namespace CRUD_funcionarios.Controllers
     }
 
     [HttpPut("{id}")]
-    public async Task UpdateAsync(long id, [FromBody] Funcionario funcionario)
+    public async Task<int> UpdateAsync(long id, [FromBody] Funcionario funcionario)
     {
-      await _repository.UpdateAsync(id, funcionario);
+      return await _repository.UpdateAsync(id, funcionario);
     }
 
     [HttpDelete("{id}")]
-    public async Task DeleteAsync(long id)
+    public async Task<int> DeleteAsync(long id)
     {
-      await _repository.DeleteAsync(id);
+      return await _repository.DeleteAsync(id);
     }
 
   }
